@@ -58,7 +58,6 @@ import sha256 from 'sha256';
 		while (hash.substring(0,4) !== '0000') {
 			nonce++;
 			hash = this.hashBlock(previousBlockHash,currentBlockData,nonce);
-			console.log(hash);
 		}
 		console.log("block returned with '0000' at: " + nonce + " nonce")
 		return nonce;
